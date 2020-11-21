@@ -17,14 +17,16 @@
 
  
   <main class="container">
-    <div class="card-columns row col-md-4">
+    <div class="col row">
+    <div class="card-columns row col-md-4 left">
       <div class="card">
-        <!--<div class="col-4 align-self-start"></div>-->
+        <div class="align-self-start">
         <h3 class="card-header">Search for a city</h3>
         <form id="user-form" class="card-body">
             <input type="text" id="searchCity"/>
             <button onclick="myFunction()">Search</button>
         </form>
+      </div>
         <div class="card">
             <div class="col-4 align-self-start"></div>
             <div class="card-header">
@@ -38,7 +40,6 @@
           </div>
       </div>
     </div>
-    </div>
     <div id="results" class="card-columns row col-md-8">
         <!--<div class="col-8 justify-content-between"></div>-->
           <div class="col">
@@ -48,69 +49,11 @@
 
                   </ul>
                 </div>
-            </div>
-        </div>
+                <div class="card-deck flex-row">
         
-                <!-- Card deck -->
-        <div class="card-deck flex-row">
-        
-            <!-- Card -->
-            <div class="card mb-4">
-        
-              <!--Card content-->
-              <div class="card-body">
-                <!--Title-->
-                <h4 class="card-title">Card title</h4>
-                <!--Text-->
-                <p class="card-text">Some quit.</p>
-          
-              </div>
-          
-            </div>
-            <!-- Card -->
-          
-            <!-- Card -->
-            <div class="card mb-4">
-          
-              <!--Card content-->
-              <div class="card-body">
-                <!--Title-->
-                <h4 class="card-title">Card title</h4>
-                <!--Text-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
-          
-              </div>
-            </div>
-            <!-- Card -->
-          
-            <!-- Card -->
-            <div class="card mb-4">
-              <!--Card content-->
-              <div class="card-body">
-          
-                <!--Title-->
-                <h4 class="card-title">Card title</h4>
-                <!--Text-->
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                  content.</p>
-              </div>
-          
-            </div>
-            <!-- Card -->
-            <div class="card mb-4">
-        
-                <!--Card content-->
-                <div class="card-body">
-                  <!--Title-->
-                  <h4 class="card-title">Card title</h4>
-                  <!--Text-->
-                  <p class="card-text">Some quit.</p>
-            
-                </div>
-            </div>
-                <div class="card mb-4">
-        
+                  <!-- Card -->
+                  <div class="card mb-4">
+              
                     <!--Card content-->
                     <div class="card-body">
                       <!--Title-->
@@ -119,29 +62,66 @@
                       <p class="card-text">Some quit.</p>
                 
                     </div>
-                </div>
-      </div>
-      </div>
-    </div>
+                
+                  </div>
+                  <!-- Card -->
+                
+                  <!-- Card -->
+                  <div class="card mb-4">
+                
+                    <!--Card content-->
+                    <div class="card-body">
+                      <!--Title-->
+                      <h4 class="card-title">Card title</h4>
+                      <!--Text-->
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                
+                    </div>
+                  </div>
+                  <!-- Card -->
+                
+                  <!-- Card -->
+                  <div class="card mb-4">
+                    <!--Card content-->
+                    <div class="card-body">
+                
+                      <!--Title-->
+                      <h4 class="card-title">Card title</h4>
+                      <!--Text-->
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                    </div>
+                
+                  </div>
+                  <!-- Card -->
+                  <div class="card mb-4">
+              
+                      <!--Card content-->
+                      <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quit.</p>
+                  
+                      </div>
+                  </div>
+                      <div class="card mb-4">
+              
+                          <!--Card content-->
+                          <div class="card-body">
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quit.</p>
+                      
+                          </div>
+                      </div>
+            </div>
+          </div>
+        </div>
     </div>
   </main>
- 
-  <!--
-  <main class="flex-row justify-space-between">
-<div class="col-12 col-md-4">
-  <div class="card">
-    <h3 class="card-header text-uppercase">Search for a  city</h3>
-    <form id="user-form" class="card-body">
-        <input type="text" id="searchCity"/>
-        <button onclick="myFunction()">Search</button>
-    </form>
-  </div>
-</div>
-<div class="col-12 col-md-8">
-  <h2 class="subtitle">Showing Repositories for : <span id="repo-search-term"></span></h2>
-<div id="repos-container" class="list-group"></div>
-</div>
-  </main>-->
 
   <script src="./assets/js/weather.js"></script>
 </body>
