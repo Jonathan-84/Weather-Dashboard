@@ -24,7 +24,7 @@
         <div class="align-self-start">
         <h3 class="card-header">Search for a city</h3>
         <form id="user-form" class="card-body">
-            <input type="text" id="searchCity"/>
+            <input type="text" id="search-city"/>
             <button>
               <span class="oi oi-magnifying-glass"></span>
           </button>
@@ -35,7 +35,7 @@
             <div class="card-header">
               Featured
             </div>
-            <ul class="list-group list-group-flush">
+            <ul class="search-history list-group list-group-flush">
               <li class="list-group-item">Cras justo odio</li>
               <li class="list-group-item">Dapibus ac facilisis in</li>
               <li class="list-group-item">Vestibulum at eros</li>
@@ -47,13 +47,17 @@
         <!--<div class="col-8 justify-content-between"></div>-->
           <div class="col">
               <div class="card-block">
-                  <h3 class="card-title">Today's Weather</h3>
+                  <h3 class="card-title featured></h3>
                   <ul>
+                    <li class= "current-city-temp"></li>
+                    <li class="current-city-humidity"></li>
+                    <li class="wind-speed"></li>
+                    <li class="uv-index"></li>
 
                   </ul>
                 </div>
                 
-                <div class="card-deck flex-row">
+                <div class="forecast-card-deck flex-row">
         
                   <!-- Card -->
                   <div class="card mb-4">
@@ -61,7 +65,7 @@
                     <!--Card content-->
                     <div class="card-body">
                       <!--Title-->
-                      <h4 class="card-title">Card title</h4>
+                      <h4 class="card-title first-day">Card title</h4>
                       <!--Text-->
                       <p class="card-text">Some quit.</p>
                 
@@ -126,7 +130,8 @@
         </div>
     </div>
   </main>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/js/weather.js"></script>
 </body>
 
