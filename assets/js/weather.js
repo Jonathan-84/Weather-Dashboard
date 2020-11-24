@@ -71,7 +71,7 @@ getUVData("coordinates");
 
 // Get information from API
 var getForecast= function() {
-    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city +
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + data +
     "&units=imperial&appid=184b90f195e0b6670ef9fee34b9291e1")
     .then( function (response) {
       return response.json();
@@ -96,7 +96,7 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=" + searchedCity +
     .then(function(data) {
       console.log(data);
       displayCurrentWeather(data);
-      displayForecast(data);
+      getForecast(data);
     })
     };
 //Display the Current/ 5 day forecast
