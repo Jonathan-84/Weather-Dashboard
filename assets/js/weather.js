@@ -2,20 +2,59 @@ var lat;
 var lon;
 var searches = [];
 
+// I need to add the storage functiona dn click event
+var saveSearches = function() {
+  localStorage.setItem("searches", JSON.stringify(searches));
+};
+
+// Load searches from local storage
+var loadSearches = function() {
+  searches = JSON.parse(localStorage.getItem("searches"));
+
+  if (!searches) {
+    searches = [];
+  }
+
+  for (var i = 0; i < searches.length; i++) {
+    var searchItem = $("<li>")
+      .addClass("list-group-item")
+      .text(searches[i]);
+
+    $(".list-group").prepend(searchItem);
+  }
+};
+
+loadSearches();
+// If search button is clicked add new list item element with name of searched city
+$("#searchBtn").click(function(event) {
+  displayWeatherInfo($("#city").val());
+  searches.push($("#city").val());
+  var searchItem = $("<li>")
+    .addClass("list-group-item")
+    .text($("#city").val());
+  
+  $(".list-group").prepend(searchItem);
+  saveSearches();
+});
+
+$(".list-group").on("click", "li", function () {
+  displayWeatherInfo($(this).text())
+});
+
 var displayWeatherInfo = function(city) {
 
   var apiWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=184b90f195e0b6670ef9fee34b9291e1";
   
   // get today's weather data
   fetch(apiWeather).then(function (response) {
-    // request was successful
+    // successful?
     if (response.ok) {
       response.json().then(function (weatherData) {
         console.log(weatherData);
         lat = weatherData.coord.lat;
         lon = weatherData.coord.lon;
 
-        // Update the current day
+        // Update the day
         var dateAndTime = weatherData.name + " " + moment().format("(M/D/YYYY)");
         $("#city-name").html(dateAndTime + "<img src='http://openweathermap.org/img/wn/" + weatherData.weather[0].icon + "@2x.png'>");
 
@@ -34,7 +73,7 @@ var displayWeatherInfo = function(city) {
 
         // 5 day forcast
         fetch(onecallURL).then(function(response) {
-          // request was successful
+          // successful?
           if (response.ok) {
             response.json().then(function (forecastData) {
               for (var i = 1; i <= 5; i++) {
