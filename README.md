@@ -19,17 +19,17 @@ Features
 - With the image representation of the weather, you will be able to understand the conditions at a glance. 
 
 ## Table of Contents
-[Technologies](#Technologies)
-[How-To Use](#How-To Use)
-[Images](#Images)
-[Contribute](#Contribute)
-[Contact](#Contact)
+[Technologies](#Technologies) <br>
+[How-To Use](#Usage)<br>
+[Images](#Images)<br>
+[Contribute](#Contribute)<br>
+[Contact](#Contact)<br>
 
 ### Technologies 
 Leveraging HTML, CSS, Javascript, jQuery, Open Weather API
 
 
-##### How-To Use
+##### Usage
 This is a web based app. You can visit the page. 
 
 Using the search bar on the left, enter the name of your city destination. Click the magnifying glass to start the search. Then you are done, just look at the weather information to help you pack.
