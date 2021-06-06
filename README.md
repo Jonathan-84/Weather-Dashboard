@@ -20,7 +20,7 @@ Features
 
 ## Table of Contents
 [Technologies](#Technologies)
-[How-To Use](#How-to Use)
+[How-To Use](#How-To Use)
 [Images](#Images)
 [Contribute](#Contribute)
 [Contact](#Contact)
